@@ -1,0 +1,47 @@
+public class RevisedHistoricalEvent extends HistoricalEvent {
+
+    private String revisedDescription;
+    private String citation;
+
+    public RevisedHistoricalEvent() {
+        super();
+        revisedDescription = "";
+        citation = "";
+    }
+
+    public RevisedHistoricalEvent(String description, Date eventDay, String revisedDescription, String citation) {
+
+        super(description, eventDay);
+        this.revisedDescription = revisedDescription;
+        this.citation = citation;
+    }
+
+    public String getRevisedDescription() {
+        return revisedDescription;
+    }
+
+    public String getCitation() {
+        return citation;
+    }
+
+    public void setRevisedDescription(String revisedDescription) {
+        this.revisedDescription = revisedDescription;
+    }
+
+    public void setCitation(String citation) {
+        this.citation = citation;
+    }
+
+    public void teach() {
+
+        System.out.println("The following \"history\" was told for many years:\n");
+        System.out.println(getDescription());
+
+        System.out.println("\nBy correcting history, not just rewriting it, we are revising it to embark on the process of righting a wrong.");
+        System.out.println("Here is the revised history:\n");
+
+        System.out.println(revisedDescription);
+
+        System.out.println("\nSource: " + citation);
+    }
+}
